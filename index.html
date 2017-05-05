@@ -3,34 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>vue-router Demo</title>
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script src="./dist/main.js"></script>
 </head>
 <body>
   <div id="app">
     <p>
-      <router-link to="/foo">go to foo</router-link>
-      <router-link to="/bar">go to bar</router-link>
+      <router-link to="/profile/Tom">Tom's profile</router-link>
+      <router-link to="/profile/Ann">Ann's profile</router-link>
     </p>
 
     <router-view></router-view>
   </div>
 </body>
 <script>
-  const Foo = {template:'<p>this is foo</p>'};
-  const Bar = {template:'<p>this is bar</p>'};
 
-  const routes=[
-    {path:"/foo",component:Foo},
-    {path:"/bar",component:Bar}
-  ];
-  const router = new VueRouter({
-    routes
-  });
-  var app = new Vue({
-    el:"#app",
-    router
-  });
 </script>
 </html>
